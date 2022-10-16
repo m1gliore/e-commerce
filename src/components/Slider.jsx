@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import {ArrowLeftOutlined, ArrowRightOutlined} from "@material-ui/icons"
-import {useState} from "react"
-import {sliderItems} from "../data"
+import styled from "styled-components";
+import {ArrowLeftOutlined, ArrowRightOutlined} from "@material-ui/icons";
+import {useState} from "react";
+import {sliderItems} from "../data";
 
 const Container = styled.div`
   width: 100%;
@@ -99,7 +99,7 @@ const Slider = () => {
             </Arrow>
             <Wrapper slideIndex={slideIndex}>
                 {sliderItems.map(item => (
-                    <Slide bg={item.bg}>
+                    <Slide bg={item.bg} key={item.id}>
                         <ImageContainer>
                             <Image src={item.img}/>
                         </ImageContainer>
