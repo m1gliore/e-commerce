@@ -8,6 +8,7 @@ const Container = styled.div`
   padding: 20px;
   gap: 15px;
 `
+
 const Title = styled.h1`
   text-transform: uppercase;
   margin: 5px;
