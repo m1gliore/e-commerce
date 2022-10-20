@@ -3,11 +3,13 @@ import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import {Add, Remove} from "@material-ui/icons";
+import {mobile} from "../responsive";
 
 const Container = styled.div``
 
 const CartContainer = styled.div`
   padding: 20px;
+  ${mobile({padding: "10px"})}
 `
 
 const Title = styled.h1`
@@ -32,11 +34,13 @@ const TopButton = styled.button`
   background-color: ${props => props.filled ? "black" : "transparent"};
   color: ${props => props.filled && "white"};
   border-radius: 5px;
+  ${mobile({width: "40%", height: "7vh"})}
 `
 
 const TopTextContainer = styled.div`
   display: flex;
   gap: 20px;
+  ${mobile({display: "none"})}
 `
 
 const TopText = styled.span`
@@ -48,6 +52,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({flexDirection: "column"})}
 `
 
 const Info = styled.div`
@@ -57,6 +62,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({flexDirection: "column", gap: "20px"})}
 `
 
 const ProductDetail = styled.div`
@@ -108,6 +114,7 @@ const AmountContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  ${mobile({gap: "15px"})}
 `
 
 const Amount = styled.span`
@@ -117,6 +124,7 @@ const Amount = styled.span`
 const Price = styled.span`
   font-size: 30px;
   font-weight: 200;
+  ${mobile({marginBottom: "20px"})}
 `
 
 const Hr = styled.hr`

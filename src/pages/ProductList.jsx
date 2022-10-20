@@ -4,6 +4,7 @@ import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import {mobile} from "../responsive";
 
 const Container = styled.div``
 
@@ -21,14 +22,17 @@ const Filter = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  ${mobile({flexDirection: "column"})}
 `
 
 const FilterText = styled.span`
+  width: 100%;
   font-size: 20px;
   font-weight: 600;
 `
 
 const Select = styled.select`
+  width: 100%;
   padding: 10px;
 `
 
@@ -67,9 +71,9 @@ const ProductList = () => {
                 <Filter>
                     <FilterText>Сортировка товаров:</FilterText>
                     <Select>
-                        <Option selected>Наличию</Option>
-                        <Option>Цене</Option>
-                        <Option>Новизне</Option>
+                        <Option selected>По наличию</Option>
+                        <Option>По цене</Option>
+                        <Option>По новизне</Option>
                     </Select>
                 </Filter>
             </FilterContainer>

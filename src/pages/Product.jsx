@@ -4,6 +4,7 @@ import Announcement from "../components/Announcement";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import {Add, Remove} from "@material-ui/icons";
+import {mobile} from "../responsive";
 
 const Container = styled.div``
 
@@ -11,6 +12,7 @@ const ProductContainer = styled.div`
   padding: 50px;
   display: flex;
   gap: 50px;
+  ${mobile({padding: "10px", flexDirection: "column", gap: "10px"})}
 `
 
 const ImageContainer = styled.div`
@@ -21,6 +23,7 @@ const Image = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
+  ${mobile({height: "40vh"})}
 `
 
 const InfoContainer = styled.div`
@@ -48,6 +51,7 @@ const FilterContainer = styled.div`
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  ${mobile({width: "100%", flexDirection: "column", gap: "20px"})}
 `
 
 const Filter = styled.div`
@@ -82,6 +86,7 @@ const AddContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({width: "100%"})}
 `
 
 const AmountContainer = styled.div`
@@ -105,6 +110,7 @@ const Button = styled.button`
   text-transform: uppercase;
   padding: 15px;
   border: 2px solid #005154;
+  border-radius: 5px;
   background-color: white;
   cursor: pointer;
   font-weight: 500;

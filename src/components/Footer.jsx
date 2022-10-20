@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import {Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter} from "@material-ui/icons";
+import {mobile} from "../responsive";
 
 const Container = styled.div`
   display: flex;
+  ${mobile({flexDirection: "column"})}
 `
 
 const Left = styled.div`
@@ -44,6 +46,7 @@ const Center = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  ${mobile({display: "none"})}
 `
 
 const Title = styled.h3`
